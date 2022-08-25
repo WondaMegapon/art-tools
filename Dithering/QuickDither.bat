@@ -18,10 +18,14 @@ echo:
 :: Remembering our colormap.
 set COLORMAP=%~dp0colormap_88.png
 
+:: First time.
+goto FIRSTJUMP
+
 :: The main loop!
 
 :LOOP
 if "%~1"=="" goto ENDLOOP
+:FIRSTJUMP
 echo "Found file!"
 
 :: Handling File I/O
@@ -82,5 +86,3 @@ goto LOOP
 echo:
 echo:
 echo "We're done!"
-echo:
-pause
